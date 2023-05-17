@@ -1,0 +1,27 @@
+ {{#with main}}
+ <main>
+        <section>
+            {{> title data="My education" big = true }}
+            {{#each educations}}
+       <ul>
+           <li>
+            {{name}}
+{{#unless isEnd}} (in progress)</li> {{/unless}}
+           </li>
+       </ul>
+        {{/each }}
+
+        <div>
+            {{> title data="My certificates"}}
+        </div>
+         {{#each certificates}}
+       <ul>
+           <li>
+            {{name}} ({{id}})
+           </li>
+       </ul>
+        {{/each }}
+        </section>
+    </main>
+    {{/with}}
+
