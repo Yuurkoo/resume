@@ -1,0 +1,72 @@
+
+<main>
+    <section>
+     <div>
+       <h1>Page - <span class="badge bg-secondary">{{name}}</span></h1>       
+     </div>
+
+<hr>
+     <br>
+
+     {{#each users}}
+     <div>
+     <p class=""> id - <em>{{id}}</em></p>
+     <p class=""> name - <em>{{name}}</em></p>
+     <p class=""> gender - <em>{{gender}}</em></p>
+     <p class=""> age - <em>{{age}}</em></p>      
+     </div>
+     
+     <br>
+<hr>
+     <div>
+      {{#each friends}}
+      <div><strong>Friends:</strong></div>
+      <div>
+     <p class=""> id - <em>{{id}}</em></p>
+     <p class=""> name - <em>{{name}}</em></p>
+     <p class=""> gender - <em>{{gender}}</em></p>
+     <p class=""> age - <em>{{age}}</em></p>          
+      </div>
+
+      <br>
+
+      <div>
+      {{#each mutual_friends}}
+       <div>
+     <p class=""> id - <em>{{id}}</em></p>
+     <p class=""> name - <em>{{name}}</em></p>
+     <p class=""> gender - <em>{{gender}}</em></p>
+     <p class=""> age - <em>{{age}}</em></p>
+     <br>          
+      </div>
+      {{/each}}
+      {{/each}}
+
+     <br>
+
+     <div>
+      {{#each groups}}
+      <div>
+      <p class=""> id - <em>{{id}}</em></p>
+     <p class=""> name - <em>{{name}}</em></p>
+     <p class=""> description - <em>{{description}}</em></p>
+      </div>
+
+     <br>
+
+     <div>
+      {{#each members}}
+      <div>
+         <p class=""> id - <em>{{id}}</em></p>
+     <p class=""> name - <em>{{name}}</em></p>
+     <p class=""> gender - <em>{{gender}}</em></p>
+     <p class=""> age - <em>{{age}}</em></p>
+      </div>
+      {{/each}}
+     </div>
+      {{/each}}
+     </div>
+
+     {{/each}}
+   </section>
+</main>
