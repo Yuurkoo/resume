@@ -1,0 +1,90 @@
+
+ <main>
+        <section>
+            <div>
+              <h1>Page - <span class="badge bg-secondary">{{name}}</span></h1>
+              <span class="badge bg-secondary">what it means? <em>{{description}}</em></span>
+            </div>
+            <br>
+            <hr>
+
+             {{#with history}}
+            <div>
+      <p class="badge bg-secondary"><strong>Founder:</strong>  {{founder}}, in {{year}}</p>
+            </div>
+            {{/with}}
+
+<div>
+    <strong><span class="badge bg-secondary">Types:</span></strong>
+</div>
+     {{#each types}}
+      <div>
+    <ul class="list-group list-group-flush">
+  <li class="list-group-item">{{this}}</li>
+   </ul>
+      </div>
+     {{/each}}
+      <hr>
+
+<br>
+<div>
+    <em>The are some <strong> syntax: </strong></em>
+</div>
+{{#with syntax}}
+<div>
+<p>1. {{variables}}</p>
+<p>2. {{functions}}</p>
+<p>3. {{conditionals}}</p>
+<p>4. {{loops}}</p>
+<p>5. {{classes}}</p>
+     </div>
+{{/with}}
+
+     <br>
+     <div>
+         <em>The are some <strong> features: </strong></em>
+     </div>
+     <div>
+{{#each features}}
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">{{this}}</li>
+   </ul>
+{{/each}}
+     </div>
+
+     <br>
+
+      <div>
+{{#each libraries}}
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">{{this}}</li>
+   </ul>
+{{/each}}
+     </div>
+
+      <br>
+
+      <div>
+{{#each tools}}
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">{{this}}</li>
+   </ul>
+{{/each}}
+     </div>
+
+     <br>
+<hr>
+<div>
+    <h3>Community:</h3>
+</div>
+{{#each community}}
+     <div>
+<ul>
+    <li>{{name}} / {{type}}</li>
+</ul>
+     </div>
+     {{/each}}
+        </section>
+    </main>
+
+
