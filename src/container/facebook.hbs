@@ -17,7 +17,7 @@
      </div>
      
      <br>
-<hr>
+
      <div>
       {{#each friends}}
       <div><strong>Friends:</strong></div>
@@ -32,6 +32,7 @@
 
       <div>
       {{#each mutual_friends}}
+      <div><strong>Mutual friends:</strong></div>
        <div>
      <p class=""> id - <em>{{id}}</em></p>
      <p class=""> name - <em>{{name}}</em></p>
@@ -46,6 +47,7 @@
 
      <div>
       {{#each groups}}
+      <div><strong>Groups:</strong></div>
       <div>
       <p class=""> id - <em>{{id}}</em></p>
      <p class=""> name - <em>{{name}}</em></p>
@@ -56,6 +58,7 @@
 
      <div>
       {{#each members}}
+      <div><strong>Members:</strong></div>
       <div>
          <p class=""> id - <em>{{id}}</em></p>
      <p class=""> name - <em>{{name}}</em></p>
@@ -66,7 +69,6 @@
      </div>
       {{/each}}
      </div>
-
      {{/each}}
    </section>
 </main>
