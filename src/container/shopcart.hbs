@@ -34,44 +34,7 @@
        <hr>
     </div>
 
-    <section>
-        {{#each goodsBlock}}
-        <div class="card mb-3" >
-  <div class="row g-0">
-    <div class="col-md-1">
-      <img src="{{image}}" class="img-fluid rounded-start" alt="alt">
-    </div>
-    <div class="col-md-4">
-      <div class="card-body">
-        <h5 class="card-title">{{name}}</h5>
-        <p class="card-text">{{description}}</p>
-      </div>
-    </div>
-    <div class="col-md-2 ps-5">
-        {{#with price}}
-      <div class="card-body ps-5 mt-2">
-        <p class="card-title">{{title}}</p>
-        <p class="card-text"><strong>{{value}}</strong></p>
-      </div>
-      {{/with}}
-    </div>
-    <div class="col-3 mt-5 ps-5">
-        <p>{{amount}}</p>
-    </div>
-    <div class="col-md-2 ps-5">
-        {{#each buttons}}
-        <div class="mt-2">
-           {{#if isPrimary}}<button class="btn btn-primary">{{text}}</button>{{/if}}
-        </div>
-        <div>
-           {{#if isDanger}}<button class="btn btn-danger">{{text}}</button>{{/if}}
-        </div>
-        {{/each}}
-    </div>
-  </div>
-</div>
-{{/each}}
-    </section>
+    {{cartGoodsItem}}
 
     <br>
     <div>
