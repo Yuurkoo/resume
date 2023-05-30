@@ -1,0 +1,173 @@
+
+<main>
+    <section>
+      <div>
+              <h1>Page - <span class="badge bg-secondary">{{make}} / {{model}}</span></h1>
+              <span class="badge bg-secondary">Details: <em>{{year}} , {{color}}</em></span>
+            </div>
+            <br>
+            <hr>
+{{#with features}}
+<div>
+{{#with interior}}
+
+{{#with seats}}
+<div>
+<h2><span class="badge bg-secondary">Seats:</span></h2>
+
+<p>Material - {{material}}</p>
+<p>Color - {{color}}</p>
+<p>Hated - {{heated}}</p>
+</div>
+{{/with}}
+
+<br>
+
+{{#with dashboard}}
+<div>
+<strong>Material - </strong> <u>{{material}}</u>
+<br>
+<strong>Color - </strong> <u>{{color}}</u>
+</div>
+
+
+{{#with display}}
+<div>
+  <br>
+
+  <div>
+  <strong>Type:</strong> <em> {{type}}</em>
+  </div>
+
+<br>
+
+<div>
+  <strong>Size:</strong> <em> {{size}}</em>
+</div>
+
+<br>
+
+<div>
+  <strong>Resolution:</strong> <em>{{resolution}}</em>
+</div>
+
+</div>
+{{/with}}
+{{/with}}
+
+{{#with audio}}
+<br>
+
+<div>
+  <h3>Audio</h3>
+</div>
+<div>
+  <p><em>system - {{system}}</em></p>
+    <p><em>speakers - {{speakers}}</em></p>
+      <p><em>{{subwoofers}}</em></p>
+</div>
+{{/with}}
+{{/with}}
+
+<br>
+
+{{#with exterior}}
+<h4>Exterior</h4>
+{{#with wheels}}
+<div>
+  <p><em>size - {{size}}</em></p>
+    <p><em>type - {{type}}</em></p>
+      <p><em>color - {{color}}</em></p>
+</div>
+{{/with}}
+<br>
+
+{{#with headlights}}
+<h5><span class="badge bg-secondary">Headlights:</span></h5>
+<div>
+  <p><em>brightness - {{brightness}}</em></p>
+    <p><em>type - {{type}}</em></p>
+</div>
+{{/with}}
+
+<br>
+
+{{#with sunroof}}
+<strong><span class="badge bg-secondary">Sunroof:</span></strong>
+<div>
+  <p><em>size - {{size}}</em></p>
+    <p><em>type - {{type}}</em></p>
+</div>
+{{/with}}
+{{/with}}
+
+{{#with safety}}
+
+<br>
+
+{{#with airbags}}
+<strong><span class="badge bg-secondary">Airbags:</span></strong>
+<div>
+  <p><em>front - {{front}}</em></p>
+    <p><em>side - {{side}}</em></p>
+    <p><em>knee - {{knee}}</em></p>
+    <p><em>rear - {{rear}}</em></p>
+</div>
+{{/with}}
+{{/with}}
+
+{{/with}}
+
+<br>
+
+{{#with engine}}
+<strong><span class="badge bg-secondary">Aengine:</span></strong>
+<div>
+  <p><em>type - {{type}}</em></p>
+    <p><em>displacement - {{displacement}}</em></p>
+    <p><em>horsepower - {{horsepower}}</em></p>
+    <p><em>torque - {{torque}}</em></p>
+</div>
+
+<br>
+
+{{#with transition}}
+<strong><span class="badge bg-secondary">Transition:</span></strong>
+<div>
+  <p><em>type - {{type}}</em></p>
+    <p><em>gears - {{gears}}</em></p>
+</div>
+{{/with}}
+{{/with}}
+
+{{#with fuel_economy}}
+<strong><span class="badge bg-secondary">Fuel:</span></strong>
+<div>
+<p><em>city: {{city}}</em></p>
+<p><em>highway: {{highway}}</em></p>
+<p><em>combined: {{combined}}</em></p>
+</div>
+{{/with}}
+
+<br>
+
+{{#with price}}
+<strong><span class="badge bg-secondary">Price:</span></strong>
+<div>
+<p><em>base: {{base}}</em></p>
+<p><em>destination: {{destination}}</em></p>
+
+{{#with options}}
+<p>navigation: {{navigation}}</p>
+  <p>moonroof: {{moonroof}}</p>   
+  <p>premium_paint: {{premium_paint}}</p>  
+{{/with}}
+</div>
+<div>
+  <strong>Total = {{total}}</strong>
+</div>
+{{/with}}
+</div>
+
+ </section>
+</main>
