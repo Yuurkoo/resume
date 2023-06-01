@@ -1,0 +1,161 @@
+<main>
+    {{#with navigation}}
+    <section class="card">
+        <div class="nav">
+            {{#each links}}
+            <div class="nav-item">
+                <a href="{{href}}" class="nav-link">{{text}}</a>
+            </div>
+            {{/each}}
+            <div class="nav-item">
+                <a href="#" class="nav-link disabled">Disabled</a>
+            </div>
+        </div>
+    </section>
+      {{/with}}
+
+      <div class="mt-5">  
+        <div class="nav ">
+            {{#each breadcrumb}}
+            <div class="nav-item">
+                {{#if url includeZero=true}}
+                <a href="{{url}}" class="nav-link">{{name}}  </a> 
+                {{else}}
+                <a href="{{url}}" class="nav-link disabled">{{name}}</a>
+                    {{/if}}
+            </div>
+            {{/each}}
+        </div>
+      </div>
+
+      <div class="mt-5">
+        {{#with header}}
+        <h1>Ноутбуки</h1>
+        {{/with}}
+      </div>
+
+      <div class="row mt-4">
+        {{#each sortBlock}}
+        <div class="col-3">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>{{placeholder}}</option>
+
+          {{#each options}}
+          <option value="{{value}}">{{text}}</option>
+          {{/each}}
+        </select>
+        </div>
+        {{/each}}
+      </div>
+      
+      <br>
+      
+
+      {{!-- бокова частина --}}
+      <div class="row">
+        <section class="card col-4">
+          {{#with filterBlock}}
+
+          <div class="card-body">
+            {{#with sellers}}
+            <div>
+              <p>{{title}}</p>
+            
+                {{#each list}}
+                 <div class="form-check">
+                    <label for="" class="form-cheack-label">{{value}}</label>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+              
+            </div>
+            {{/with}}
+
+            <br>
+            <div>
+                <hr>
+            </div>
+            <br>
+
+            <div>
+                {{#with brands}}
+                <div>
+                    <p>{{title}}</p>
+                </div>
+                <div class="mb-3">
+                    {{#with input}}
+                    <input placeholder="{{placeholder}}" class="col-12">
+                    {{/with}}
+                </div>
+                {{#each options}}
+                <div class="form-check">
+                    <label for="" class="form-cheack-label">{{value}}</label>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+                
+                {{/with}}
+            </div>
+
+            <br>
+            <div>
+                <hr>
+            </div>
+            <br>
+
+            <div>
+                {{#with price}}
+                <div>
+                    <p>{{title}}</p>
+                </div>
+                <div>
+                    {{#with range}}
+                    <div>
+                      <input placeholder="{{from}}" class="col-12 mb-3">
+                      <input placeholder="{{to}}" class="col-12">
+                    </div>
+                    {{/with}}
+                </div>
+                 <div class="mt-3">
+                    {{#with button}}
+                    <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+
+            <br>
+            <div>
+                <hr>
+            </div>
+            <br>
+
+            <div>
+                {{#each filterList}}
+                <div class="mb-3">
+              <p>{{title}}</p>
+            
+                {{#each options}}
+                 <div class="form-check">
+                    <label for="" class="form-cheack-label">{{value}}</label>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+                {{/each}}
+              
+            </div>
+
+            <hr>
+
+                {{/each}}
+            </div>
+
+          </div>
+
+          {{/with}}
+        </section>
+               {{!-- бокова частина --}}
+
+    {{> catalogItem}}
+      </div>
+      
+</main>
