@@ -1,0 +1,92 @@
+    {{#with program}}
+ <main>
+        <section>
+    {{#with excursion}}
+    <div>
+        <h1><a href="" class="btn btn-warning">{{name}}</a></h1>
+    </div>
+    <hr>
+    <br>
+    <div class="card mb-3">
+            <div>
+        <span><strong>Location:</strong></span>
+        <em>{{location.city}}, {{location.country}}</em>
+    </div>
+    <br>
+    <div>
+        <strong>Date:</strong>
+        <em>{{date}}</em>
+    </div>
+    <br>
+        {{#each program}}
+        <div>
+            <strong>About our program:</strong>
+        </div>
+        <br>
+        <div>
+            <strong>{{name}}</strong>
+            <p>Type: {{type}}</p>
+            <p>Duration: {{duration}}</p>
+        </div>
+            {{#with details}}
+                {{#with museum}}
+                <div>
+                    <p>{{name}}</p>
+                </div>
+                <br>
+                <div>
+                    <span>Adress: <em>{{location.address}}</em></span>
+                    <p>City: <em>{{location.city}}</em></p>
+                    <p>Country: <em>{{location.country}}</em></p>
+                </div>
+                <hr>
+                <br>
+                    {{#each exhibits}}
+                    <strong>About exhibits:</strong>
+                    <ul>
+                        <li>{{name}}</li>
+                        {{#if artist includeZerot=true}}
+                        <li>{{artist}}</li>
+                        {{/if}}
+                        <li>{{description}}</li>
+                    </ul>
+                    {{/each}}
+                {{/with}}
+    </div>
+
+
+                 
+                <div class="card mb-3">
+                      {{#with venue}}
+                  <div>
+                    <p>{{name}}</p>
+                </div>
+                <div>
+                    <span>Adress: <em>{{location.address}}</em></span>
+                    <p>City: <em>{{location.city}}</em></p>
+                    <p>Country: <em>{{location.country}}</em></p>
+                </div>
+                {{/with}}
+                
+                {{#each performers}}
+                <strong>Performers:</strong>
+                <ul>
+                    <li>{{name}}</li>
+                    <li>{{type}}</li>
+                </ul>
+                {{/each}}
+
+                {{#with guide}}
+                <span>The name <em>{{name}} /</em></span>
+                <span>Of course language - <em>{{language}} </em></span>
+                <p>Her raiting: <em>{{rating}}</em></p>
+                {{/with}}
+            {{/with}}
+        {{/each}}
+    {{/with}}
+                </div>
+              
+        </section>
+    </main>
+        {{/with}}
+
