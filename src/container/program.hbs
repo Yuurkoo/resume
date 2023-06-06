@@ -3,11 +3,12 @@
         <section>
     {{#with excursion}}
     <div>
-        <h1>{{name}}</h1>
+        <h1><a href="" class="btn btn-warning">{{name}}</a></h1>
     </div>
     <hr>
     <br>
-    <div>
+    <div class="card mb-3">
+            <div>
         <span><strong>Location:</strong></span>
         <em>{{location.city}}, {{location.country}}</em>
     </div>
@@ -51,10 +52,12 @@
                     </ul>
                     {{/each}}
                 {{/with}}
+    </div>
 
-                 <hr> 
 
-                {{#with venue}}
+                 
+                <div class="card mb-3">
+                      {{#with venue}}
                   <div>
                     <p>{{name}}</p>
                 </div>
@@ -81,6 +84,8 @@
             {{/with}}
         {{/each}}
     {{/with}}
+                </div>
+              
         </section>
     </main>
         {{/with}}

@@ -1,14 +1,15 @@
 <div>
-    <section>
+    <section class="row">
       {{#with person}}
-      <div>
+      <div class=" card text-center mb-3">
         <h1>{{name}}</h1>
         <em>{{birthdate}} - {{deathdate}}</em>
       </div>
       <br>
-        <hr>
+        
       <br>
-      <div>
+      <div class="card mb-3">
+          <div>
        <strong>Birthplace: </strong> <em>{{birthplace}}</em>
       </div>
      <br>
@@ -23,11 +24,14 @@
       <div>
        <strong>Occupation:</strong> <em>{{occupation}}</em>
       </div>
+      </div>
          {{/with}}
       <br>
-      <hr>
+      
 
-      <div>
+      <div class="card">
+        <div class="card-body">
+                <div>
         <strong>About education:</strong> 
           <ul>
             {{#each education}}
@@ -109,14 +113,16 @@
           <li>{{this}}</li>
         </ul>
         {{/each}}
+      </div>
+        </div>
       </div> 
 
        <br>
-       <hr>
+       
        <br>
 
 
-      <div>
+      <div class="card mb-3">
        <strong> Major discoveries:</strong>
         {{#each major_discoveries}}
        <div>
@@ -137,7 +143,7 @@
 
        <br>
 
-      <div>
+      <div class="card mb-3">
        <strong> Contributions:</strong>
         {{#with contributions}}
        <div>
